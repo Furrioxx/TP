@@ -13,7 +13,7 @@ class Appy
     {
         self::$session = Session::getInstance();
 
-        //self::getAuth()->connectFromCookie();
+        self::getAuth()->connectFromCookie();
 
         self::runRouter();
     }
@@ -27,14 +27,14 @@ class Appy
         }
     }
 
-    // public static function getAuth()
-    // {
-    //     return new Auth(
-    //         self::$session,
-    //         array(
-    //             'restriction_msg' => "Vous n'avez pas le droit d'accéder à cette page !",
-    //             'redirected_url'  => WEB_PATH . "login"
-    //         )
-    //     );
-    // }
+    public static function getAuth()
+    {
+        return new Auth(
+            self::$session,
+            array(
+                'restriction_msg' => "Vous n'avez pas le droit d'accéder à cette page !",
+                'redirected_url'  => WEB_PATH . "login"
+            )
+        );
+    }
 }

@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^/?$ public/index.php?route=users [L]
+RewriteRule ^/?$ public/index.php?route=home [L]
 
 # Si le fichier ou le répertoire n'existe pas
 RewriteCond %{REQUEST_FILENAME} !-f
