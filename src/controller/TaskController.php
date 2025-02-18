@@ -74,6 +74,7 @@ class TaskController extends BaseController
                 "task" => $task
             ));
         } else {
+            $this->session::setFlash("danger", "Aucune task n'a été trouvé avec cet id");
             $this->redirectTo("tasks");
         }
     }
@@ -84,6 +85,9 @@ class TaskController extends BaseController
             $this->taskRepository->delete($task);
 
             $this->redirectTo('tasks');
+        } else {
+            $this->session::setFlash("danger", "Aucune task n'a été trouvé avec cet id");
+            $this->redirectTo("tasks");
         }
     }
 }
