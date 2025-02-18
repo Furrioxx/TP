@@ -7,6 +7,7 @@ use Appy\Src\controller\HomeController;
 use Appy\Src\controller\UserController;
 use Appy\Src\controller\LoginController;
 use Appy\Src\controller\RegisterController;
+use Appy\Src\controller\TaskController;
 use Exception;
 
 class Router
@@ -57,18 +58,23 @@ class Router
                     $controller = new HomeController;
                     $controller->index();
                     break;
-                case "users":
-                    $controller = new UserController;
+                case "tasks":
+                    $controller = new TaskController;
                     if (!empty($this->url[1])) {
                         switch ($this->url[1]) {
                             case "add":
                                 $controller->add();
                                 break;
+                            case "edit":
+                                $controller->edit($this->url[2]);
+                                break;
+                            case "delete":
+                                $controller->delete($this->url[2]);
+                                break;
                         }
                     } else {
                         $controller->index();
                     }
-
                     break;
                 default:
                     $controller = new ErrorController;
