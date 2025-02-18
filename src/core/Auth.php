@@ -62,7 +62,7 @@ class Auth
         $userInDb = $this->userRepository->findOneBy(["email" => $username]);
         if (!$userInDb) {
             $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-            ConnexionBDD::query('INSERT INTO users VALUES (null, :name, :email, :password, NOW());', ['name' => $name, "email" => $username, "password" => $passwordHashed]);
+            ConnexionBDD::query('INSERT INTO users VALUES (null, :name, :email, :password, NOW(), null);', ['name' => $name, "email" => $username, "password" => $passwordHashed]);
             return true;
         }
         return false;
