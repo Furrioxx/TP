@@ -13,9 +13,14 @@ La structure du projet est un framework créer par mes soins
    ```
 
 2. **Installer les dépendances avec Composer**
+
    ```sh
    composer install
    ```
+
+3. **Créer la base de donnée**
+
+   Dans le repo se trouve le fichier sql pour créer la base de donnée
 
 ## Structure du projet
 
