@@ -1,5 +1,5 @@
 vendor
-.env
-.env.production
-.env.development
-.env.recette
+# .env
+# .env.production
+# .env.development
+# .env.recette
