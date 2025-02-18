@@ -34,6 +34,21 @@ Les vues sont géré par [Twig](https://github.com/twigphp/Twig)
 
 Ce projet utilise [**phpdotenv**](https://github.com/vlucas/phpdotenv) pour la gestion des variables d'environnement.
 
+Le projet implement aussi [Bootstrap](https://getbootstrap.com)
+
+j'ai utilisé twig et bootstrap pour la rapidité et la simplicité pour créer des vues
+
+Git à été utilisé
+
+Un commit à été réalisé pour chaque feature, fix...
+
+Dans un environnement professionnel la création de branches aurait été nécéssaire
+
+# Options supplémentaires
+
+- implémentation d'alertes pour les utilisateurs
+- case "remember me" lors du login
+
 ## Contributeur
 
 - Tom PELUD
