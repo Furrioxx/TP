@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^/?$ public/index.php?route=users [L]
+
+# Si le fichier ou le répertoire n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger toutes les autres requêtes vers "public/index.php"
+RewriteRule ^(.*)$ public/index.php?route=$1 [L]
+
+# Assurez-vous que les erreurs 404 ne révèlent pas l'arborescence des fichiers
+ErrorDocument 404 /public/index.php

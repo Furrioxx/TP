@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MVC - Users {% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Ajouter un user</h1>
+
+    <a href="{{ path("users") }}">
+        <button type="button" class="btn btn-primary mb-3">Retour</button>
+    </a>
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
