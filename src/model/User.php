@@ -2,8 +2,11 @@
 
 namespace Appy\Src\model;
 
-class User{
+class User
+{
     public $id;
     public $name;
     public $email;
+    public $password;
+    public $createdAt;
 }
