@@ -9,4 +9,5 @@ class User
     public $email;
     public $password;
     public $createdAt;
+    public $rememberToken
 }
